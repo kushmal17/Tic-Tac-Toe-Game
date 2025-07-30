@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+.screen {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: 0.3s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+.screen header {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.options-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.options-row button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+  flex: 1;
+  min-width: 100px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); 
+}
+
+.playerX:hover {
+  background: red;
+  color: white;
+}
+
+.playerO:hover {
+  background: blue;
+  color: white;
+}
+
+.playerX.active {
+  background: red;
+  color: white;
+}
+
+.playerO.active {
+  background: blue;
+  color: white;
+}
+
+.easy:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+.hard:hover {
+  background: #f44336;
+  color: white;
+}
+
+.easy.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.hard.active {
+  background: #f44336;
+  color: white;
+}
+
+.startBtn {
+  background: goldenrod !important;
+  color: white !important;
+}
+
+.play-board, .result-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.play-board.show, .result-box.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.details {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+.players {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-weight: 600;
+  color: goldenrod;
+}
+
+.players .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: white;
+  border-radius: 5px;
+  z-index: 1;
+  transition: 0.3s ease;
+}
+
+.players span {
+  flex: 1;
+  text-align: center;
+  z-index: 2;
+  padding: 10px;
+}
+
+.players.active .slider {
+  left: 50%;
+}
+
+.play-area {
+  margin-top: 15px;
+}
+
+.play-area section {
+  display: flex;
+}
+
+.play-area span {
+  width: 90px;
+  height: 90px;
+  background: white;
+  margin: 3px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 90px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.score-board {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.result-box {
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.won-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.btn button {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 8px 20px;
+  background: goldenrod;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.players div {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #2f57eb;
+  cursor: default;
+}
+
+.players .active {
+  background-color: goldenrod;
+  border-radius: 6px;
+}
