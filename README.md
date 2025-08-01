@@ -1,6 +1,7 @@
 # Tic-Tac-Toe-Game
 
 🎮 Tic Tac Toe Game
+
 This is a web-based Tic Tac Toe game built with HTML, CSS, and JavaScript. It allows users to play against a bot in two difficulty modes: Easy (random moves) and Hard (smart AI using optimal strategy). The game is interactive, responsive, and features a clean modern UI.
 
 ✨ Features
